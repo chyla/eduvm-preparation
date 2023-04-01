@@ -1,0 +1,27 @@
+---
+
+- name: mozillateam/ppa is enabled
+  apt_repository:
+    repo: 'ppa:mozillateam/ppa'
+    state: present
+
+- name: firefox snap not installed
+  snap:
+    name: [
+            'firefox',
+          ]
+    state: absent
+
+- name: firefox-esr is installed
+  apt:
+    name: [
+            'firefox-esr',
+          ]
+    state: present
+
+- name: touch screen for firefox is enabled
+  lineinfile:
+    path: /etc/environment
+    regexp: 'MOZ_USE_XINPUT2=1'
+    line: 'MOZ_USE_XINPUT2=1'
+

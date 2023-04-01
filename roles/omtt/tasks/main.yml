@@ -1,0 +1,14 @@
+---
+
+- name: omtt/ppa is enabled
+  apt_repository:
+    repo: 'ppa:chyla-org/omtt-lunar'
+    state: present
+
+- name: omtt is installed
+  apt:
+    name: [
+            'omtt',
+          ]
+    state: present
+

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=EduVM
+Exec=firefox-esr --new-window "https://chyla.org/eduvm/"
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=x-office-document
+StartupNotify=true
+

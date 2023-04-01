@@ -1,0 +1,11 @@
+---
+
+- name: fonts are installed
+  apt:
+    name: [
+            'fonts-liberation',
+            'fonts-crosextra-carlito',
+            'fonts-crosextra-caladea',
+          ]
+    state: present
+

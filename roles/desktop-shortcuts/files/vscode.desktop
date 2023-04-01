@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Visual Studio Code
+Comment=
+Exec=0install run https://apps.0install.net/gui/vs-code.xml
+Icon=zeroinstall
+Path=
+Terminal=false
+StartupNotify=true
+

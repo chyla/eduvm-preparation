@@ -1,0 +1,36 @@
+---
+
+- name: base console tools are installed
+  apt:
+    name: [
+            'screen',
+            'tmux',
+            'rename',
+            'net-tools',
+            'mosh',
+            'wget',
+            'curl',
+            'vim',
+            'silversearcher-ag',
+            'aptitude',
+            'zip',
+            'unzip',
+            'ace',
+            'unace',
+            'arj',
+            'p7zip-full',
+            'lhasa',
+            'htop',
+            'pinentry-curses',
+            'apt-file',
+            'debian-goodies',
+            'links',
+            'lynx',
+            'pv',
+            'rdiff-backup',
+            'whois',
+            'sqlite3',
+            'mc',
+            'nano',
+          ]
+    state: present

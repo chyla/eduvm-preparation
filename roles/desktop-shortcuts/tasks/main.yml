@@ -1,0 +1,37 @@
+---
+
+- name: eduvm launcher 
+  copy:
+    src: eduvm.desktop
+    dest: /home/eduvm/Desktop/eduvm.desktop
+    owner: eduvm
+    group: eduvm
+    mode: a+x
+
+- name: firefox launcher 
+  copy:
+    src: firefox-esr.desktop
+    dest: /home/eduvm/Desktop/firefox-esr.desktop
+    owner: eduvm
+    group: eduvm
+    mode: a+x
+
+- name: pycharm community launcher 
+  copy:
+    src: pycharm-community.desktop
+    dest: /home/eduvm/Desktop/pycharm-community.desktop
+    owner: eduvm
+    group: eduvm
+    mode: a+x
+
+- name: vscode launcher 
+  copy:
+    src: vscode.desktop
+    dest: /home/eduvm/Desktop/vscode.desktop
+    owner: eduvm
+    group: eduvm
+    mode: a+x
+
+- name: trust all launchers
+  command: su - eduvm -c "for f in /home/eduvm/Desktop/*.desktop ; do dbus-launch gio set $f metadata::xfce-exe-checksum $(sha256sum $f | awk '{print $1}') ; done"
+

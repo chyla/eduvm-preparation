@@ -1,0 +1,9 @@
+---
+
+- name: virtualbox guest additions installed
+  apt:
+    name: [
+            'virtualbox-guest-x11',
+          ]
+    state: present
+

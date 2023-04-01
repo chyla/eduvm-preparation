@@ -1,0 +1,9 @@
+---
+
+- name: 0install is installed
+  apt:
+    name: [
+            '0install',
+          ]
+    state: present
+

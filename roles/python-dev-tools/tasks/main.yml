@@ -1,0 +1,84 @@
+---
+
+- name: python tools
+  apt:
+    name: [
+            'python3',
+            'python3-pip',
+            'python3-wheel',
+            'python3-venv',
+            'python3-virtualenv',
+            'python3-tk',
+            'black',
+            'pylint',
+            'flake8',
+            'pycodestyle',
+          ]
+    state: present
+
+- name: cpython build deps
+  apt:
+    name: [
+            'build-essential',
+            'libssl-dev',
+            'zlib1g-dev',
+            'libbz2-dev',
+            'libreadline-dev',
+            'libsqlite3-dev',
+            'curl',
+            'libncursesw5-dev',
+            'xz-utils',
+            'tk-dev',
+            'libxml2-dev',
+            'libxmlsec1-dev',
+            'libffi-dev',
+            'liblzma-dev',
+            'llvm',
+          ]
+    state: present
+
+- name: python editors
+  apt:
+    name: [
+            'idle',
+            'jupyter',
+          ]
+    state: present
+
+- name: pycharm community snap installed
+  snap:
+    name: [
+            'pycharm-community',
+          ]
+    state: present
+    classic: True
+
+- name: pyenv installed
+  command: su - eduvm -c "if [ ! -e /home/eduvm/.pyenv ] ; then curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash ; fi"
+  register: pyenv
+  changed_when: "'Cloning into' in pyenv.stdout" 
+
+- name: pyenv PATH set in .bashrc
+  lineinfile:
+    path: /home/eduvm/.bashrc
+    regexp: 'export PATH="$HOME/.pyenv/bin:$PATH"'
+    line: 'export PATH="$HOME/.pyenv/bin:$PATH"'
+
+- name: pyenv virtualenv-init set in .bashrc
+  lineinfile:
+    path: /home/eduvm/.bashrc
+    regexp: 'eval "$(pyenv virtualenv-init -)"'
+    line: 'eval "$(pyenv virtualenv-init -)"'
+
+- name: pyenv init set in .bashrc
+  lineinfile:
+    path: /home/eduvm/.bashrc
+    regexp: 'eval "$(pyenv init -)"'
+    line: 'eval "$(pyenv init -)"'
+
+- name: pyenv init path set in .bashrc
+  lineinfile:
+    path: /home/eduvm/.bashrc
+    regexp: 'eval "$(pyenv init --path)"'
+    line: 'eval "$(pyenv init --path)"'
+

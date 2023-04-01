@@ -1,0 +1,10 @@
+---
+
+- name: APT cache is up to date
+  apt:
+    update_cache: yes
+
+- name: packages are up to date
+  apt:
+    upgrade: yes
+

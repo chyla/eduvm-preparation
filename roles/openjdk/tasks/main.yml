@@ -1,0 +1,10 @@
+---
+
+- name: default openjdk (jre+jdk) is installed
+  apt:
+    name: [
+            'default-jre',
+            'default-jdk',
+          ]
+    state: present
+

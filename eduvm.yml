@@ -1,0 +1,27 @@
+---
+
+- hosts:
+    - machines
+  roles:
+    - upgrade
+    - disable-unattened-upgrades
+    - unnecessary-software
+    - virtualbox-guest
+    - base-console-tools
+    - firefox
+    - fonts
+    - terminal-emulators
+    - text-editors
+    - drawing
+    - graphviz
+    - openjdk
+    - pavucontrol
+    - 0install
+    - vcs
+    - cpp-dev-tools
+    - python-dev-tools
+    - omtt
+    - no-non-free-sw
+    - desktop-shortcuts
+    - clean-up
+

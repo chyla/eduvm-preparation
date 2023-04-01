@@ -1,0 +1,35 @@
+---
+
+- name: unnecessary software not installed
+  apt:
+    name: [
+            'memtest86+',
+          ]
+    state: absent
+
+- name: xfce screensaver & power management removal as not needed on VM
+  apt:
+    name: [
+            'xfce4-screensaver',
+            'xfce4-power-manager',
+            'xfce4-power-manager-data',
+            'xfce4-power-manager-plugins',
+          ]
+    state: absent
+
+- name: (x)ubuntu branding not installed
+  apt:
+    name: [
+            'xubuntu-artwork',
+            'xubuntu-docs',
+            'xubuntu-wallpapers',
+            'xubuntu-icon-theme',
+            'plymouth-theme-xubuntu-logo',
+            'plymouth-theme-xubuntu-text',
+            'plymouth-theme-ubuntu-text',
+            'ubiquity-slideshow-xubuntu',
+            'debian-cd',
+            'ldm-xubuntu-theme',
+          ]
+    state: absent
+

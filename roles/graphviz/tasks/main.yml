@@ -1,0 +1,9 @@
+---
+
+- name: graphviz is installed
+  apt:
+    name: [
+            'graphviz',
+            'graphviz-doc',
+          ]
+    state: present

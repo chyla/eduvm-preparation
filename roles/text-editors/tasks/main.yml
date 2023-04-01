@@ -1,0 +1,21 @@
+---
+
+- name: vim, emacs are installed
+  apt:
+    name: [
+            'vim',
+            'vim-gtk3',
+            'emacs',
+            'emacs-gtk',
+          ]
+    state: present
+
+- name: common text editors are installed
+  apt:
+    name: [
+            'kate',
+            'kwrite',
+            'gedit',
+            'pluma',
+          ]
+    state: present

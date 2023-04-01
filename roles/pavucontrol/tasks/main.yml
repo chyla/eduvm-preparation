@@ -1,0 +1,8 @@
+---
+
+- name: pavucontrol is installed
+  apt:
+    name: [
+            'pavucontrol',
+          ]
+    state: present

@@ -1,0 +1,11 @@
+---
+
+- name: terminal emulators are installed
+  apt:
+    name: [
+            'konsole',
+            'gnome-terminal',
+            'mate-terminal',
+          ]
+    state: present
+

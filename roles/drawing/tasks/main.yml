@@ -1,0 +1,16 @@
+---
+
+- name: pinta is installed
+  apt:
+    name: [
+            'pinta',
+          ]
+    state: present
+
+- name: gromit-mpx screen drawing tool is installed
+  apt:
+    name: [
+            'gromit-mpx',
+          ]
+    state: present
+

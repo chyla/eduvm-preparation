@@ -1,0 +1,38 @@
+---
+
+- name: C++ tools are installed
+  apt:
+    name: [
+            'gcc',
+            'gdb',
+            'clang',
+            'clang-tools',
+            'clang-tidy',
+            'clang-format',
+            'cmake',
+            'ninja-build',
+            'valgrind',
+            'kcachegrind',
+            'cppcheck',
+            'cppcheck-gui',
+            'gcovr',
+            'lcov',
+            'binutils',
+            'universal-ctags',
+            'googletest',
+            'libboost-all-dev',
+            'linux-tools-generic',
+            'autoconf',
+            'automake',
+            'astyle',
+          ]
+    state: present
+
+- name: C++ editors are installed
+  apt:
+    name: [
+            'qtcreator',
+            'kdevelop',
+          ]
+    state: present
+

@@ -1,0 +1,25 @@
+---
+
+- name: vrms is installed
+  apt:
+    name: [
+            'vrms',
+          ]
+    state: present
+
+- name: non-free packages not installed
+  apt:
+    name: [
+            'amd64-microcode',
+            'firmware-sof-signed',
+            'intel-microcode',
+          ]
+    state: absent
+    purge: true
+
+- name: check for non-free packages with vrms
+  command: sh -c 'vrms | grep "non-free packages"'
+  register: vrms
+  failed_when: vrms.rc == 0
+  changed_when: False
+
