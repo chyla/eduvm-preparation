@@ -1,0 +1,12 @@
+---
+
+- name: hex editors are installed
+  apt:
+    name: [
+            'ghex',
+            'bless',
+            'wxhexeditor',
+            'okteta',
+            'hexedit',
+          ]
+    state: present

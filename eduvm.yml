@@ -12,6 +12,7 @@
     - fonts
     - terminal-emulators
     - text-editors
+    - hex-editors
     - drawing
     - graphviz
     - openjdk
