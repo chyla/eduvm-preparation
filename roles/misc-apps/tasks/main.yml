@@ -4,6 +4,7 @@
   apt:
     name: [
             'qalculate-gtk',
+            'kcalc',
             'evince',
           ]
     state: present
