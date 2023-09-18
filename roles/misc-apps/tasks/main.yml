@@ -1,0 +1,9 @@
+---
+
+- name: misc apps
+  apt:
+    name: [
+            'qalculate-gtk',
+            'evince',
+          ]
+    state: present
