@@ -21,6 +21,7 @@
             'p7zip-full',
             'lhasa',
             'htop',
+            'iotop',
             'pinentry-curses',
             'apt-file',
             'debian-goodies',
