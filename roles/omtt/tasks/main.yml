@@ -2,7 +2,7 @@
 
 - name: omtt/ppa is enabled
   apt_repository:
-    repo: 'ppa:chyla-org/omtt-lunar'
+    repo: 'ppa:chyla-org/omtt-mantic'
     state: present
 
 - name: omtt is installed
