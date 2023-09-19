@@ -5,6 +5,7 @@
   roles:
     - upgrade
     - disable-unattened-upgrades
+    - lightdm
     - unnecessary-software
     - virtualbox-guest
     - base-console-tools

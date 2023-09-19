@@ -1,0 +1,10 @@
+---
+
+- name: eduvm user autologin 
+  copy:
+    src: lightdm.conf
+    dest: /etc/lightdm/lightdm.conf
+    owner: root
+    group: root
+    mode: 0644
+
