@@ -4,8 +4,6 @@
   apt:
     name: [
             'ghex',
-            'bless',
-            'wxhexeditor',
             'okteta',
             'hexedit',
           ]
