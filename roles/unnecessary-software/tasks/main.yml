@@ -23,6 +23,13 @@
           ]
     state: absent
 
+- name: rfkill not installed
+  apt:
+    name: [
+            'rfkill',
+          ]
+    state: absent
+
 - name: xfce screensaver & power management removal as not needed on VM
   apt:
     name: [
