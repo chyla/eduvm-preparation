@@ -30,6 +30,14 @@
           ]
     state: absent
 
+- name: sane not installed
+  apt:
+    name: [
+            'sane-utils',
+            'sane-airscan',
+          ]
+    state: absent
+
 - name: xfce screensaver & power management removal as not needed on VM
   apt:
     name: [
