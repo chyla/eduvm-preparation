@@ -1,9 +1,17 @@
 ---
 
-- name: unnecessary software not installed
+- name: memtest86+ not installed
   apt:
     name: [
             'memtest86+',
+          ]
+    state: absent
+
+- name: fwupd not needed on VM
+  apt:
+    name: [
+            'fwupd',
+            'fwupd-signed',
           ]
     state: absent
 
