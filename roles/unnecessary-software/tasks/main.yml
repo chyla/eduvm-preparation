@@ -15,6 +15,14 @@
           ]
     state: absent
 
+- name: hplip not installed
+  apt:
+    name: [
+            'hplip',
+            'hplip-data',
+          ]
+    state: absent
+
 - name: xfce screensaver & power management removal as not needed on VM
   apt:
     name: [
