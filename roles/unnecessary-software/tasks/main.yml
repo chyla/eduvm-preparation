@@ -1,9 +1,40 @@
 ---
 
-- name: unnecessary software not installed
+- name: memtest86+ not installed
   apt:
     name: [
             'memtest86+',
+          ]
+    state: absent
+
+- name: fwupd not needed on VM
+  apt:
+    name: [
+            'fwupd',
+            'fwupd-signed',
+          ]
+    state: absent
+
+- name: hplip not installed
+  apt:
+    name: [
+            'hplip',
+            'hplip-data',
+          ]
+    state: absent
+
+- name: rfkill not installed
+  apt:
+    name: [
+            'rfkill',
+          ]
+    state: absent
+
+- name: sane not installed
+  apt:
+    name: [
+            'sane-utils',
+            'sane-airscan',
           ]
     state: absent
 
