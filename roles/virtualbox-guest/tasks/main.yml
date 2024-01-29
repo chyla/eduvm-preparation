@@ -7,3 +7,8 @@
           ]
     state: present
 
+- name: add eduvm user to the vboxsf group
+  command: usermod -a -G vboxsf eduvm
+  register: vbgroup
+  failed_when: vbgroup.rc != 0
+  changed_when: False
