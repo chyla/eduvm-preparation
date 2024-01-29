@@ -6,5 +6,7 @@
             'qalculate-gtk',
             'kcalc',
             'evince',
+            'thunar-archive-plugin',
+            'xarchiver',
           ]
     state: present
