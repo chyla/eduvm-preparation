@@ -2,7 +2,7 @@
 
 - name: omtt/ppa is enabled
   apt_repository:
-    repo: 'ppa:chyla-org/omtt-mantic'
+    repo: 'ppa:chyla-org/omtt-noble-numbat'
     state: present
 
 - name: omtt is installed
