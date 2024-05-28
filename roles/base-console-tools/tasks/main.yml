@@ -33,5 +33,6 @@
             'sqlite3',
             'mc',
             'nano',
+            'ntpdate',
           ]
     state: present
