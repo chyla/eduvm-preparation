@@ -2,7 +2,7 @@
 
 - name: omtt/ppa is enabled
   apt_repository:
-    repo: 'ppa:chyla-org/omtt-oracular-oriole'
+    repo: 'ppa:chyla-org/omtt-plucky-puffin'
     state: present
 
 - name: omtt is installed
