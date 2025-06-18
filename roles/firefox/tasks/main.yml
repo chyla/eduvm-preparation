@@ -1,8 +1,21 @@
 ---
 
+- name: deb822_repository dependencies
+  apt:
+    name: [
+            'python3-debian',
+          ]
+    state: present
+
 - name: mozillateam/ppa is enabled
-  apt_repository:
-    repo: 'ppa:mozillateam/ppa'
+  deb822_repository:
+    name: mozillateam
+    types: deb
+    uris: https://ppa.launchpadcontent.net/mozillateam/ppa/ubuntu
+    suites: "{{ ansible_distribution_release }}"
+    components: main
+    signed_by: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x738BEB9321D1AAEC13EA9391AEBDF4819BE21867
+    enabled: true
     state: present
 
 - name: firefox snap not installed

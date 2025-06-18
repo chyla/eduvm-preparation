@@ -1,8 +1,21 @@
 ---
 
+- name: deb822_repository dependencies
+  apt:
+    name: [
+            'python3-debian',
+          ]
+    state: present
+
 - name: omtt/ppa is enabled
-  apt_repository:
-    repo: 'ppa:chyla-org/omtt-plucky-puffin'
+  deb822_repository:
+    name: omtt
+    types: deb
+    uris: https://ppa.launchpadcontent.net/chyla-org/omtt-plucky-puffin/ubuntu
+    suites: "{{ ansible_distribution_release }}"
+    components: main
+    signed_by: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xE95A625F7C660ECA7ECD4AAF14D87715B734E0F5
+    enabled: true
     state: present
 
 - name: omtt is installed
