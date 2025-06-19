@@ -1,0 +1,22 @@
+---
+
+- name: docker.io is installed
+  apt:
+    name: [
+            'docker.io',
+          ]
+    state: present
+
+
+- name: docker-compose is installed
+  apt:
+    name: [
+            'docker-compose',
+          ]
+    state: present
+
+- name: eduvm user belongs to group docker
+  user:
+    name: eduvm
+    groups: docker
+    append: yes

@@ -22,6 +22,7 @@
     - vcs
     - cpp-dev-tools
     - python-dev-tools
+    - docker
     - omtt
     - misc-apps
     - no-non-free-sw
