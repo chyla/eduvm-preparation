@@ -19,6 +19,14 @@
           ]
     state: present
 
+- name: astral-uv installed
+  snap:
+    name: [
+            'astral-uv',
+          ]
+    state: present
+    classic: True
+
 - name: cpython build deps
   apt:
     name: [
