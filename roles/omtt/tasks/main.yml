@@ -18,6 +18,10 @@
     enabled: true
     state: present
 
+- name: APT cache is up to date
+  apt:
+    update_cache: yes
+
 - name: omtt is installed
   apt:
     name: [
