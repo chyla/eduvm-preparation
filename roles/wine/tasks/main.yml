@@ -1,0 +1,8 @@
+---
+
+- name: wine is installed
+  apt:
+    name: [
+            'wine64',
+            'wine-binfmt',
+    ]
