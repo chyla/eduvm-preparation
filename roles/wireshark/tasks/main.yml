@@ -1,0 +1,10 @@
+---
+
+- name: wireshark is installed
+  apt:
+    name: [
+            'tshark',
+            'wireshark',
+            'wireshark-doc',
+          ]
+    state: present

@@ -23,6 +23,7 @@
     - cpp-dev-tools
     - python-dev-tools
     - docker
+    - wireshark
     - omtt
     - misc-apps
     - no-non-free-sw
