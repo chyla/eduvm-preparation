@@ -4,6 +4,7 @@
   apt:
     name: [
             'gcc',
+            'mingw-w64',
             'gdb',
             'clang',
             'clang-tools',
