@@ -1,9 +1,5 @@
 ---
 
-- name: old dependency packages removed
-  apt:
-    autoremove: yes
-
 - name: non installed packages configuration purged
   command: apt-get purge -y '~c'
   register: purge_config
